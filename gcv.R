@@ -11,7 +11,7 @@ fourier=function(y,x1,x2,x3,K)
 	p=ncol(data)-1
 	q=(p*(K+1))+1
 	C=matrix(0,n,q)
-	result<-matrix(0,K,2)
+	result=matrix(0,K,2)
 	for (k in 1:K)
 	{
 		for(i in 1:n)
