@@ -8,7 +8,7 @@ x3=as.matrix(data[,5])
 fourier=function(y,x1,x2,x3,K)
 {
 	n=length(y)
-	p=ncol(data)-1
+	p=ncol(data)-2
 	q=(p*(K+1))+1
 	C=matrix(0,n,q)
 	result=matrix(0,K,2)
