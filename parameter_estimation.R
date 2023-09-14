@@ -33,8 +33,8 @@ cat("\n=============================================================")
 	I=diag(1,n,n)
 	A=C%*%pinv(t(C)%*%C)%*%t(C)
 	yhat=A%*%y
-	alfa=rep(0,q)
-	alfa=pinv(t(C)%*%C)%*%t(C)%*%y
+	beta=rep(0,q)
+	beta=pinv(t(C)%*%C)%*%t(C)%*%y
 	error=y-yhat
 	MSE=sum((error)^2)/n
 	for(i in 1:n)
@@ -56,8 +56,10 @@ cat("\n=========================================================\n")
 			F=F+f
 		}
 	R=S/F
-	cat("Nilai Koefisien Determinasi =")
+	cat("Coefficient of determination =")
 	print(R)
-	print(alfa)
+	print(beta)
+write.csv(yhat,file="d://Yhat.csv")
+write.csv(beta,file="d://Parameter.csv")
 }
 dx=estimation(y,x1,x2,x3,K=3)
