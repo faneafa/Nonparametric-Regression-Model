@@ -56,8 +56,7 @@ cat("\n=========================================================\n")
 			F=F+f
 		}
 	R=S/F
-	cat("Coefficient of determination =")
-	print(R)
+	cat("Coefficient of determination =", R)
 	print(beta)
 write.csv(yhat,file="d://yhat.csv")
 write.csv(beta,file="d://parameter.csv")
